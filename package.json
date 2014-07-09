@@ -1,0 +1,32 @@
+{
+  "name": "tail-stream",
+  "version": "0.1.0",
+  "description": "Continuous file tail to stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/*.js --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jimbly/node-tail-stream.git"
+  },
+  "keywords": [
+    "tail",
+    "always",
+    "forever",
+    "stream"
+  ],
+  "author": "Jimb Esser (https://github.com/Jimbly/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jimbly/node-tail-stream/issues"
+  },
+  "homepage": "https://github.com/Jimbly/node-tail-stream",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1"
+  },
+  "dependencies": {
+    "always-tail": "^0.1.1"
+  }
+}
