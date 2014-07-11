@@ -6,7 +6,7 @@ var write_interval = setInterval(function () {
 }, 10);
 
 // Pipe the tail stream to stdout
-var tail_stream = require('./');
+var tail_stream = require('../');
 var stream = tail_stream.createReadStream('example.txt', {highWaterMark: 256});
 var bytes = 0;
 function onReadable() {
@@ -17,12 +17,12 @@ function onReadable() {
   }
   if (bytes > 10000) {
     console.log('read ' + bytes + ' bytes, stopping listening');
-    setTimeout(function () {
-      clearInterval(write_interval);
-    }, 2000);
-    // In this case, can either remove the listener (e.g. broken pipe) or explicitly close
-    stream.removeListener('readable', onReadable);
-    //stream.close();
+    clearInterval(write_interval);
+    // In this particular case, we can't just remove the listener, need to
+    // explicitly close our stream.
+
+    //stream.removeListener('readable', onReadable);
+    stream.close();
   }
 }
 stream.on('readable', onReadable);

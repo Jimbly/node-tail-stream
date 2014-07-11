@@ -6,7 +6,7 @@ setInterval(function () {
 }, 10);
 
 
-var tail_stream = require('./');
+var tail_stream = require('../');
 var http = require('http');
 
 http.createServer(function (req, res) {

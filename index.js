@@ -4,8 +4,8 @@ var fs = require('fs');
 var Readable = require('stream').Readable;
 var util = require('util');
 
-var debug = console.log.bind(console);
-//var debug = function(){};
+//var debug = console.log.bind(console);
+var debug = function(){};
 
 function startWatch(ts) {
   if (!ts.watcher) {

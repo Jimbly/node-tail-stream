@@ -1,5 +1,5 @@
 {
-  "name": "tail-stream",
+  "name": "jimbly-tail-stream",
   "version": "0.1.0",
   "description": "Continuous file tail to stream",
   "main": "index.js",

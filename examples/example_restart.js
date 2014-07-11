@@ -9,7 +9,7 @@ var write_interval = setInterval(function () {
 }, 10);
 
 // Pipe the tail stream to stdout
-var tail_stream = require('./');
+var tail_stream = require('../');
 var stream = tail_stream.createReadStream('example.txt', {highWaterMark: 256});
 var bytes = 0;
 var endc = 0;

@@ -5,9 +5,12 @@ Continuous file tail as a stream.  Handles file truncation, but not yet file
 rollover (old file being deleted/moved and a new file with the same name
 replacing it).
 
-Installation
-============
-`npm install tail-stream`
+Differences from [https://github.com/juul/tail-stream](tail-stream)
+============================
+Somehow, despite searching, I failed to find this existing module before
+authoring my own.  The only key difference is that this new module handles
+broken pipes slightly more elegantly, with some automatic cleanup and a manual
+close to prevent leaking of FSWatchers.
 
 Usage
 =====
