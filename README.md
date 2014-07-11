@@ -10,7 +10,8 @@ Differences from [tail-stream](https://github.com/juul/tail-stream)
 Somehow, despite searching, I failed to find this existing module before
 authoring my own.  The only key difference is that this new module handles
 broken pipes slightly more elegantly, with some automatic cleanup and a manual
-close to prevent leaking of FSWatchers.
+close to prevent leaking of FSWatchers.  Other than that, the existing module
+has a lot more functionality and robustness.
 
 Usage
 =====
