@@ -1,4 +1,4 @@
-node-tail-stream
+jimbly-tail-stream
 ================
 
 Continuous file tail as a stream.  Handles file truncation, but not yet file
